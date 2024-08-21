@@ -1,0 +1,26 @@
+def RightRotate(a, n, k):
+    k = k % n;
+    for i in range(0, n):
+        if(i < k):
+            print(a[n + i - k], end = " ");
+        else:
+            print(a[i - k], end = " ");
+Array = [ 1, 2, 3, 4, 5,6,7];
+N = len(Array);
+K = 3;
+RightRotate(Array, N, K);
+
+
+Another Method
+def fun(arr,k):
+    k = k%len(arr)
+    sol = arr[-3:] + arr[:-3]
+    return sol
+    
+    
+    
+    
+a = [1,2,3,4,5,6,7]
+k = 3 
+print(fun(a,k))
+    
