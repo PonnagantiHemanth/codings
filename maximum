@@ -1,0 +1,15 @@
+def find_maximum(a):
+    # Implement a simple sorting algorithm (e.g., bubble sort)
+    for i in range(len(a)):
+        for j in range(0, len(a) - i - 1):
+            if a[j] > a[j + 1]:
+                # Swap if the element found is greater than the next element
+                a[j], a[j + 1] = a[j + 1], a[j]
+                
+    # After sorting, the last element will be the maximum
+    return a[-1]
+
+# Example usage
+a = [1, 2, 3, 45, 67]
+result = find_maximum(a)
+print(result)
