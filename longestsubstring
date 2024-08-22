@@ -1,0 +1,20 @@
+def lengthOfLongestSubstring(s):
+    start = 0 
+    maximum = 0 
+    storing = {}
+    
+    for i in range(len(s)):
+        if s[i] in storing and storing[s[i]] >= start:
+            print(start)
+            start = max(start,storing[s[i]] + 1)
+        storing[s[i]] = i
+        maximum = max(maximum, i - start + 1)
+        print(maximum,"maximum")
+        print(storing)
+    
+    return maximum
+
+# Example usage
+s = "abcabcbb"
+result = lengthOfLongestSubstring(s)
+print(result)  # Output: 5
