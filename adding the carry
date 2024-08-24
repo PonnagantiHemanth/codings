@@ -11,9 +11,9 @@ def add_twonumers(n1,n2):
         total = val2+val1+carry
         res += [total%10] 
         carry = total //10
-    if (carry):)
-    return res 
+    if (carry):
         res.append(carry)
+    return res 
     
 a = [9,9,9,9,9,9,9]
 b = [9,9,9,9]
