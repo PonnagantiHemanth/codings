@@ -1,0 +1,20 @@
+def add_twonumers(n1,n2):
+    res = []
+    carry = 0
+    for i in range (max(len(n1),len(n2))):
+        val1 = 0 
+        val2 = 0 
+        if (i < len(n1)):
+            val1 = n1[i]
+        if (i < len(n2)):
+            val2 = n2[i]
+        total = val2+val1+carry
+        res += [total%10] 
+        carry = total //10
+    if (carry):)
+    return res 
+        res.append(carry)
+    
+a = [9,9,9,9,9,9,9]
+b = [9,9,9,9]
+print(add_twonumers(a,b))
