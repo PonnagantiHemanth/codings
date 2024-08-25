@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class = "bg_container">
+        <div>
+            <h1 class = "heading">4.0 Technologies</h1>
+            <p class = "para">The carrers of todays undergrades wil potentially lie around 4.0 technologies irrespective of their branch.join the community to stay up to date with rapidly chainging tech and the the skills needed by the industry</p>
+        </div>
+        <ul class = "box">
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+            <li class = "lis">Tech Foundations</li>
+        </ul>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+# css 
+
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+.bg_container{
+    background-color: #222544;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading{
+    color: #2d9cca;
+}
+.para{
+    color: white;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    border-color: #222544;
+    padding-left: 0px;
+    margin-top: 48px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.lis{
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+    border:1px solid #95cae0;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
