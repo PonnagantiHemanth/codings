@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <div class="boxes-container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box1">5</div>
+        <div class="box box2">6</div>
+        <div class="box box3">7</div>
+        <div class="box box4">8</div>
+        <div class="box box1">5</div>
+        <div class="box box2">6</div>
+        <div class="box box3">7</div>
+        <div class="box box4">8</div>
+        <div class="box box1">9</div>
+        <div class="box box2">10</div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+#css 
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.boxes-container {
+    height: 100vh;
+    border: 4px solid blue;
+    display: flex;
+    flex-direction: column;
+    font-size: 70px;
+    flex-wrap: wrap;
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    font-family: Roboto;
+}
+
+.box1 {
+    background-color: black;
+    color: white;
+}
+
+.box2 {
+    background-color: red;
+    color: white;
+}
+
+.box3 {
+    background-color: yellow;
+    color: black;
+}
+
+.box4 {
+    background-color: pink;
+    color: white;
+}
