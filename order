@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div class="boxes-container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="box box5">5</div>
+      <div class="box box6">6</div>
+      <div class="box box7">7</div>
+      <div class="box box8">8</div>
+    </div>
+  </body>
+</html>
+
+
+css 
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+body {
+  margin: 0px;
+}
+
+.boxes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  border: 10px solid goldenrod;
+}
+
+.box {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+}
+
+.box1 {
+  background-color: #1abc9c;
+  order: 1;
+}
+
+.box2 {
+  background-color: #3498db;
+  
+}
+
+.box3 {
+  background-color: #9b59b6;
+  order: 7;
+}
+
+.box4 {
+  background-color: #333333;
+  order: 7;
+}
+
+.box5 {
+  background-color: #f1c40f;
+  
+}
+
+.box6 {
+  background-color: #e38710;
+}
+
+.box7 {
+  background-color: #e74c3c;
+ order: -5;
+}
+
+.box8 {
+  background-color: #bdc3c7;
+  order: -5;
+}
