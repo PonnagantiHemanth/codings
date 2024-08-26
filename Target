@@ -1,0 +1,12 @@
+class Solution(object):
+    def searchInsert(self, nums, target):
+        # Iterate over the list
+        for i in range(0, len(nums)):
+            # If the target is found or a larger number is encountered
+            if nums[i] >= target:
+                return i
+        # If the target is larger than all elements, it should be inserted at the end
+        return len(nums)
+a = Solution()
+sol = a.searchInsert([2, 4, 6, 8],12)
+print(sol)
