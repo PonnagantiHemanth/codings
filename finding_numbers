@@ -1,0 +1,14 @@
+a = "11111111112"
+v = {}
+s = ""
+p = ''
+for i in a:
+    if (i in v):
+        v[i] += 1 
+    else:
+        v[i] = 1 
+print(v)
+for i,j in v.items():
+    s += str(i) 
+    p += str(j) 
+print(p+s)
