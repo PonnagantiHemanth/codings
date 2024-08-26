@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <div class = "box_containers">
+        <div class = "box1">1</div>
+        <div class = "box2">2</div>
+        <div class = "box3">3</div>
+        <div class = "box4">4</div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+css 
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+body{
+    margin: 0px;
+}
+
+.box_containers{
+    display: flex;
+    flex-direction: row;
+    
+    height: 100vh;
+}
+
+
+.box1{
+    background-color: pink;
+    padding: 10px;
+   width: 40px;
+   
+}
+.box2{
+    background-color: red;
+    width: 40px;
+    padding: 10px;
+}
+.box3{
+    background-color: yellow;
+    width: 40px;
+    padding: 10px;
+}
+.box4{
+    background-color: orange;
+    width: 40px;
+    padding: 10px;
+}
