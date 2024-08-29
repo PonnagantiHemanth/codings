@@ -1,0 +1,15 @@
+def fun(a,no_of_rotation):
+    for i in range (no_of_rotation):
+        row = len(a)
+        column = len(a[0])
+        transpose_matrix = [[0]*row for i in range (row)]
+        for i in range (row):
+            for j in range (column):
+                transpose_matrix[j][i] = a[i][j]
+        for i in range(row):
+            transpose_matrix[i] = transpose_matrix[i][::-1]
+        a = transpose_matrix
+    return transpose_matrix
+a = [[1,2,3],[4,5,6],[7,8,9]]
+ro = int(input("Enter the input "))
+print(fun(a,(ro//90)%4))
