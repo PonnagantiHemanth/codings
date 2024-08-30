@@ -1,0 +1,9 @@
+def fabi(num):
+    if (num == 0):
+        return 0 
+    elif(num == 1):
+        return 1
+    else:
+        return (fabi(num-1) + fabi(num-2))
+a = 10
+print(fabi(a))
