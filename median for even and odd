@@ -1,0 +1,10 @@
+a = [3,4,5,6,7,8]
+b = len(a)//2
+print(b)
+sol = a[b] + a[b-1]
+print(sol/2)
+
+# For odd 
+a = [3,4,5]
+b = len(a)//2
+print(a[b])
