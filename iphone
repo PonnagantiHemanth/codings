@@ -1,0 +1,84 @@
+html 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class = "bg">
+        <nav class="navbar">
+        <img src="https://assets.ccbp.in/frontend/intermediate-rwd/iPhone-sale-logo.png" class="website-logo"/>
+        <ul class="nav-items-list">
+            <li class="nav-item">About</li>
+            <li class="nav-item">contact us</li>
+        </ul>
+    </nav>
+        <div class = "product">
+            <div>
+                <h1>iPhone 12</h1>
+                <p>Adding power to you day</p>
+            </div>
+            <img src = "https://assets.ccbp.in/frontend/intermediate-rwd/iphone-12-img.png" class ="img"/>
+            <p class = "address">Visit at the apple store</p>
+        </div>
+    </div>
+  </body>
+</html>
+
+
+css
+
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+.bg{
+    background-color: #000000;
+    height: 100vh;
+    background-size: cover;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.website-logo{
+    width: 90px;
+    align-self: center;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to left,black,blue);
+    min-height: 10vh;
+}
+.nav-items-list{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-item{
+    margin-left: 20px;
+}
+.img{
+    align-self: center;
+    width: 80%;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: flex-start;
+    min-height: 90vh;
+}
+.address{
+    align-self: flex-end;
+    color: #9aa5b1;
+}
