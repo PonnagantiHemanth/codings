@@ -1,0 +1,15 @@
+class Solution(object):
+    def removeElement(self, nums, val):
+        new_length = 0 
+        for i in range (len(nums)):
+            if (nums[i] != val):
+                print(nums[i])
+                nums[new_length] = nums[i]
+                new_length += 1
+                print(nums)
+        return nums 
+a = Solution()
+arr = [3,2,2,3,5]
+val = 3
+sol = a.removeElement(arr,val)
+print(sol)
