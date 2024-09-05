@@ -1,0 +1,25 @@
+a = [1, 2, 3, 4, 2, 3]
+dic = {}
+
+# Count the frequency of each element
+for i in a:
+    if i in dic:
+        dic[i] += 1
+    else:
+        dic[i] = 1
+
+# Find the maximum frequency
+max_freq = max(dic.values())
+print(max_freq)
+
+# Initialize an empty list to store modes
+modes = []
+
+# Loop through each key-value pair in the dictionary
+for key, value in dic.items():
+    # Check if the value (frequency) is equal to the maximum frequency
+    if value == max_freq:
+        # Add the key (element) to the list of modes
+        modes.append(key)
+
+print("Mode(s):", modes)
