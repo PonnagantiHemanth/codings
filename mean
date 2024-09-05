@@ -1,0 +1,18 @@
+def calculate_mean(data):
+    # Check if the list is empty
+    if not data:
+        raise ValueError("The list is empty")
+    
+    # Calculate the sum of the elements
+    total_sum = 0
+    for number in data:
+        total_sum += number
+    
+    # Calculate the mean
+    mean_value = total_sum / len(data)
+    return mean_value
+
+# Test the function
+data = [10, 20, 30, 40, 50]
+mean_value = calculate_mean(data)
+print("Mean:", mean_value)
