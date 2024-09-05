@@ -1,15 +1,23 @@
-def fun(a,no_of_rotation):
-    for i in range (no_of_rotation):
+def fun(a, no_of_rotation):
+    for _ in range(no_of_rotation):
         row = len(a)
         column = len(a[0])
-        transpose_matrix = [[0]*row for i in range (row)]
-        for i in range (row):
-            for j in range (column):
-                transpose_matrix[j][i] = a[i][j]
+        # Transpose the matrix (rows become columns)
+        transpose_matrix = [[0] * row for _ in range(column)]
         for i in range(row):
+            for j in range(column):
+                transpose_matrix[j][i] = a[i][j]
+        
+        # Reverse each row to simulate the 90-degree clockwise rotation
+        for i in range(column):
             transpose_matrix[i] = transpose_matrix[i][::-1]
+        
+        # Update 'a' to the newly rotated matrix
         a = transpose_matrix
-    return transpose_matrix
-a = [[1,2,3],[4,5,6],[7,8,9]]
-ro = int(input("Enter the input "))
-print(fun(a,(ro//90)%4))
+    
+    return a
+
+# Test the function
+a = [[1, 2, 3], [4, 5, 6]]
+ro = int(input("Enter the input (degrees): "))
+print(fun(a, (ro // 90) % 4))
