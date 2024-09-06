@@ -1,0 +1,11 @@
+a = list("apple")
+vowel = ["a", "e", "i", "o", "u"]
+vowel_count = {}
+consonant_count = {}
+
+for i in a:
+    if  i in vowel:
+        #vowel_count[i] = vowel_count.get(i,0) + 1
+        vowel_count[i] = vowel_count.get(i, 0) + 1
+print("Vowel counts:", vowel_count)
+print("Consonant counts:", consonant_count)
