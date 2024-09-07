@@ -1,0 +1,18 @@
+#Pass by value 
+def modify(lst):
+    lst.append(10)
+    print("Inside function:", lst)  # This modifies the original list
+
+my_list = [1, 2, 3]
+modify(my_list)
+print("Outside function:", my_list)  # The change is reflected outside the function
+
+#Pass by reference 
+
+def modify_list(my_list):
+    my_list.append(100)  # This modifies the original list
+    print("Inside function:", my_list)
+
+original_list = [1, 2, 3]
+modify_list(original_list)
+print("Outside function:", original_list)  # The change persists outside
