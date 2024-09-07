@@ -1,0 +1,18 @@
+class product:
+    def __init__(self,name,price,rating,deal):
+        self.name = name
+        self.price = price 
+        self.rating = rating 
+        self.deal = deal 
+        #super class 
+    def display(self):
+        print(self.price)
+class subclass(product):
+    def se_waranty(self,waranty):
+        self.waranty = waranty
+    def get_waranty(self):
+        return (self.waranty)
+a = subclass("mi",2323,3.4,333)
+a.se_waranty(23)
+print(a.get_waranty())
+print(a.name)
