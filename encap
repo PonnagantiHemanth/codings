@@ -1,0 +1,12 @@
+class mobile:
+    def __init__(self,name,model):
+        self.name = name 
+        self.model = model 
+    def main(self,num):
+        print("calling")
+    def update(self,value):
+        self.model = value
+a = mobile('sam',3232)
+a.update('mi')
+print(a.model)
+a.main(5555)
