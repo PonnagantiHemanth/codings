@@ -11,3 +11,8 @@ if word:
     li.append(word)
 print(li)
 
+
+# another method 
+
+a = "a    b    1               3    ".split()
+print(a)
