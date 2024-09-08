@@ -1,0 +1,13 @@
+a = "a      b     c     d   e   2  f       g h        i                 "
+li = []
+word = ''
+for i in a:
+    if (i != " "):
+        word += i 
+    elif (word):
+        li.append(word)
+        word = ''
+if word:
+    li.append(word)
+print(li)
+
