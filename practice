@@ -1,0 +1,79 @@
+#Task 5
+
+alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ,'i',  'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't' ,'u', 'v', 'w', 'x', 'y', 'z']
+number = ['0','1','2','3','4','5','6','7','8','9']
+alpha2 = ["A",'1','2']
+characters = ["@","#","$","*","!"]
+
+a = input("Enter the input : ")
+co1 = 0
+num = 0
+aplphas = 0
+charact = 0
+for i in a:
+    if (i in alpha):
+        co1 += 1
+    if (i in number):
+        num += 1
+    if (i in alpha2):
+        aplphas += 1
+    if (i in characters):
+        charact += 1
+
+condition1 = co1 <= 2 and co1 <= 5
+condition2 = num <= 3 and num <= 4
+condition3 = aplphas <= 1 and aplphas <= 2
+condition4 = charact <= 1 and charact <= 2
+length =  len(a)
+if (condition1 and condition2 and condition3 and condition4):
+    print('Valid Input')
+else:
+    print('Unvalid')
+
+
+#Task 4
+
+small_alpha = [1,'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h' ,'i',  'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't' ,'u', 'v', 'w', 'x', 'y', 'z']
+sample_input = "train12ing"
+digit_avaliable = []
+for i in sample_input:
+    if (i.isdigit()):
+        digit_avaliable.append(int(i))
+
+stored = []
+for i in sample_input:
+    for j in range (1,len(small_alpha)):
+         if (i == small_alpha[j]):
+             stored.append(j)
+print(sum(stored) + sum(digit_avaliable))
+
+#Task 3
+
+a = [[27,9,2,8,8,9,27],[1,18,2,1,18,4,4,6],[1,5,7,5,8,7,4,5],[1,2,3,5,8,4,4,3]]
+ # b = a[0]
+# # print(a.index(b) + 1)
+permenant_dic = {}
+for o in a:
+    temp_dict = {}
+    for j in o:
+        if (j in temp_dict):
+            temp_dict[j] += 1
+        else:
+            temp_dict[j] = 1
+    for i,j in temp_dict.items():
+        if (j == 1):
+            permenant_dic[a.index(o)+1] = i
+print(permenant_dic)
+
+#Example
+
+a = {1:4,1:8}
+ori = {}
+for i,j in a.items():
+    if (i in ori):
+        ori[i] = 1
+    else:
+        ori[i] = j
+    if (i in ori):
+        ori[str(i)+"a"] = j
+print(ori)
