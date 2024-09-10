@@ -1,0 +1,11 @@
+a = [[27, 9, 2, 8, 8, 9, 27], [1, 18, 2, 1, 18, 4, 4, 6], [1, 5, 7, 5, 8, 7, 4, 5], [1, 2, 3, 5, 8, 4, 4, 3]]
+original = {}
+for i in range (len(a)):
+    s = a[i]
+    li = []
+    for j in s:
+        li.append(j)
+    original[i+1] = li[0]
+    for k,l in enumerate(li[1:]):
+        original[f"{i+1}{chr(97+k)}"] = l 
+print(original)
