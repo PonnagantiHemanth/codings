@@ -1,0 +1,5 @@
+a = '3889898989778792'
+res = 0
+for i in a:
+    res = res*10 + int(i)
+print(res)
