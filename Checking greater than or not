@@ -1,0 +1,4 @@
+a = 10 
+n = int(input("Enter The Number "))
+c = 10 <= n and n <= 20
+print(c)
