@@ -1,0 +1,13 @@
+a = '12sai1234dddd2434'
+curr = []
+temp = []
+for i in a:
+    if (i.isdigit()):
+        curr.append(i)
+    else:
+        if (curr):
+            temp.append(''.join(curr))
+            curr = []
+if curr:
+    temp.append(''.join(curr))
+print(temp)
