@@ -1,0 +1,12 @@
+def fun(matrix):
+    max_jump = 0 
+    for i in range (len(matrix)):
+        if (i > max_jump):
+            return False 
+        max_jump = max(max_jump,i+matrix[i])
+        print(max_jump)
+        if (max_jump >= len(matrix) -1):
+            return True
+num = [2, 3, 1, 1, 4]
+#nums2 = [3, 2, 1, 0, 4]
+print(fun(num))
