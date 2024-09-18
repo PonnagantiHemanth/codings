@@ -1,0 +1,12 @@
+dics = {'I':1, 'V':5, 'X':10,  'L':50, 'C':100, 'D':500, 'M':1000}
+digis = "MCMXCIV"
+pre = 0 
+to = 0 
+for i in reversed(digis):
+    curr = dics[i]
+    if (curr < pre):
+        to = to - curr 
+    else:
+        to += curr 
+    pre = curr 
+print(to)
