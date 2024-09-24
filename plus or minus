@@ -1,0 +1,8 @@
+a = [7,8,9,10]
+b = a[0]
+for i in range(1,len(a)):
+    if (i%2 != 0):
+        b += a[i]
+    else: 
+        b -= a[i]
+print(b)
