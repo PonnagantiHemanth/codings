@@ -1,0 +1,11 @@
+nw = '43'
+arr= []
+re = int(''.join(sorted(nw)))
+print((re))
+
+a = [1,2]
+rr = int(''.join(map(str,a)))
+print(rr)
+
+
+
