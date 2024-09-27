@@ -1,0 +1,13 @@
+a = [14,41,1234,4321,7,989,116,161,161]
+a.sort()
+dics = {}
+for i in a:
+    st = str(i)
+    result = int(''.join(sorted(st)))
+    if (result in dics):
+        dics[result].append(i)
+    else:
+        dics[result] = [i]
+lis = []
+for i,j in dics.items():
+    print(str(j[0]) + ':' + str(len(j)))
