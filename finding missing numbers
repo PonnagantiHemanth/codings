@@ -1,0 +1,11 @@
+def largest_missing_negative(numbers):
+    unique = set(numbers)
+    max_elements = min(numbers)
+    minimum_elements = -1 
+    total_list = set(range(max_elements,minimum_elements+1))
+    total_elements =  total_list - unique
+    final = list(total_list-unique)
+    return max(final) if total_elements else None
+numbers = [-3, -1, -2, -5, -3, -7, -7]
+result = largest_missing_negative(numbers)
+print("Largest missing negative number:", result)
