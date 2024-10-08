@@ -1,0 +1,10 @@
+def finding_missingnumber(numbers):
+    total_elements = set(numbers)
+    #minimum_ele = min(numbers)
+    max_elements = 0 
+    range_elements = set(range(-len(numbers),max_elements))
+    final = range_elements - total_elements
+    return max(list(final))
+a = list(map(int,input().split(' ')))
+sol = finding_missingnumber(a)
+print(sol)
