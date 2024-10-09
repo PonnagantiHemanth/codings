@@ -1,0 +1,42 @@
+def equal_numbers(secondword,firstword):
+    count = 0 
+    for i in range (len(secondword)):
+        if (firstword[i] != secondword[i]):
+            count += 1 
+    return count == 1 
+
+def removing_inserting(secondword,firstword):
+    is_family = False
+    for i in range (len(secondword)):
+        if (secondword[:i] + secondword[i+1:] ==firstword):
+            is_family = True
+            break
+    return is_family
+
+def checking_family(words):
+    is_family = False
+    for i in range (len(words)-1):
+        firstword,secondword = words[i],words[i+1]
+        first_len,second_len = len(firstword),len(secondword)
+        if (first_len == second_len):
+            is_family = equal_numbers(firstword,secondword)
+        elif (first_len > second_len):
+            is_family = removing_inserting(firstword,secondword)
+        else:
+            is_family = removing_inserting(secondword,firstword)
+            
+        if not is_family:
+            break
+    if (is_family):
+       return ("Family")
+    else:
+       return ("Not a Family")
+
+def main():
+    no_of_inp = int(input())
+    for i in range (no_of_inp):
+        no_of_words = int(input())
+        words = input().split()
+        is_family = checking_family(words)
+        print(is_family)
+main()
