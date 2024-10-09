@@ -1,0 +1,31 @@
+def checking_words(first,second):
+    total_val = 0 
+    for i in range (len(first)):
+        if (first[i] != second[i]):
+            total_val += 1 
+    return total_val == 1 
+
+
+
+def check_the_family(words):
+    is_family = True
+    for i in range (len(words) -1):
+        first_word,second_word = words[i],words[i+1]
+        first_length,second_length = len(first_word),len(second_word)
+        if (first_length == second_length):
+            is_family = checking_words(first_word,second_word)
+        if not is_family:
+            return 'NOt a Family'
+    if (is_family):
+        return "Family"
+
+
+
+def main():
+    a = int(input())
+    for i in range (a):
+        total_count = int(input())
+        words = input().split()
+        is_family = check_the_family(words)
+        print(is_family)
+main()
