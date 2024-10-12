@@ -1,0 +1,8 @@
+def binary(num):
+    num = num[::-1]
+    s = 0 
+    for i in range (len(num)):
+        sol = (int(num[i]))*(2**i)
+        s += sol  
+    print(s)
+(binary('1000'))
