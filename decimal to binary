@@ -1,0 +1,7 @@
+def binary(num):
+    rem = ''
+    while (num > 0):
+        rem = str(num%2) + rem 
+        num = num//2
+    return rem
+print(binary(8))
