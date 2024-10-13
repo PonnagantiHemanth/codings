@@ -1,0 +1,12 @@
+def finding_equalsum(lists):
+    total_sum = sum(lists)
+    left_sum = 0
+    for i in range (len(lists)):
+        if (left_sum == total_sum-left_sum-lists[i]):
+            return i 
+        else:
+            left_sum += lists[i]
+    return -1 
+    
+a = [-7,2,4,9,-8,1,6]
+print(finding_equalsum(a))
