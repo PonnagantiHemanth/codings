@@ -1,0 +1,19 @@
+def odd_function(word):
+    final_number = word
+    for i in range (len(word)):
+        int_str = int(word[i])
+        if (int_str % 2 == 1):
+            final_number = word[i:] + word[:i]
+            break
+    return final_number
+def sending_ele(a):
+    result_list = []
+    for word in a:
+        finding_odd = odd_function(word)
+        result_list.append(finding_odd)
+    return result_list
+def main():
+    a = input().split()
+    finl = sending_ele(a)
+    print(*finl)
+main()
