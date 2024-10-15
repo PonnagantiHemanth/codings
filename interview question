@@ -1,0 +1,39 @@
+import math
+a = "HiHemanthgoodmorninghowareyou"
+#HiHemanthgoodmorninghowareyou
+b = len(a)
+lens = (math.sqrt(b))
+row = int(lens)
+col = (math.ceil(lens))
+lis = []
+for i in range (row):
+    word = a[:col]
+    lis.append(word)
+    a = a[col:]
+if (a):
+    lis.append(a)
+
+    
+def finding_max_length(lis):
+    current_len = 0 
+    for i in lis:
+        if (current_len < len(i)):
+            current_len = len(i)
+    return current_len
+def concatinating(sol,lis):
+    res_lis = []
+    for i in range (1,sol+1):
+        word = ''
+        for j in lis:
+            if (i <= len(j)):
+                word += j[i-1]
+            else:
+                word += ''
+        res_lis.append(word)
+    return res_lis
+def main():
+    sol = finding_max_length(lis)
+    final_sol = concatinating(sol,lis)
+    for i in final_sol:
+        print(i)
+main()
