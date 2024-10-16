@@ -1,0 +1,33 @@
+def fun(n1,n2):
+    s1 = len(n1)
+    s2 = len(n2)
+    carry = 0 
+    res = ''
+    for i in range (max(s1,s2)):
+        l1,l2 = 0,0 
+        if (i < s1):
+            l1 = int(n1[i])
+        if (i < s2):
+            l2 = int(n2[i])
+        total = l1+l2+carry
+        if (total == 1):
+            res = '1' + res 
+            carry = 0 
+        elif (total == 2):
+            res = '0' + res 
+            carry = 1 
+        elif(total == 0):
+            res = '0' + res 
+            carry = 0 
+        else:
+            res = '1' + res 
+            carry = 1 
+    if (carry):
+        res = '1' + res
+    print(res)
+            
+def main():
+    n1 = '11'
+    n2 = '1'
+    sol = fun(n1,n2)
+main()
