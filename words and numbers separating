@@ -1,0 +1,33 @@
+def endingfunction(start_index,word):
+    ending = len(word)
+    for i in range (start_index,len(word)):
+        if (not word[i].isdigit()):
+            ending = i 
+            break
+    return ending
+
+
+def finding_solution(word):
+    word_list,num_list = [],[]
+    i = 0 
+    while(i < len(word)):
+        num = ''
+        if (word[i].isdigit()):
+            start_index = i 
+            end_index = endingfunction(start_index,word)
+            num = int(word[start_index:end_index])
+            num_list.append(num)
+            word_list.append(word[:start_index])
+            word = word[end_index:]
+            
+        else:
+            i += 1 
+    word_list.append(word)
+
+def main():
+    word = input()
+    final_solution = finding_solution(word)
+    print(finding_solution)
+main()
+
+At 12pm total score is 180 with 8 4s 7 6s in 150balls
