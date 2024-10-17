@@ -13,3 +13,8 @@ a = '43'
 s = ' '.join(a)
 v = (sorted(s.split(),reverse = False))
 print(''.join(v))
+
+Recommended
+a = '43'
+s = int(''.join(sorted(a, reverse=False)))
+print(s)
