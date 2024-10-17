@@ -1,6 +1,6 @@
 def equal_numbers(secondword,firstword):
     count = 0 
-    for i in range (len(secondword)):
+    for i in range (len(firstword)):
         if (firstword[i] != secondword[i]):
             count += 1 
     return count == 1 
@@ -40,3 +40,13 @@ def main():
         is_family = checking_family(words)
         print(is_family)
 main()
+
+
+
+3
+3
+tic tac ta
+2
+tic tac
+3
+tet treat greet
