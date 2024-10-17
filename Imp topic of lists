@@ -7,5 +7,9 @@ a = [1,2]
 rr = int(''.join(map(str,a)))
 print(rr)
 
+AnotherMethod
 
-
+a = '43'
+s = ' '.join(a)
+v = (sorted(s.split(),reverse = False))
+print(''.join(v))
