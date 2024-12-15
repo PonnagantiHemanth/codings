@@ -1,0 +1,11 @@
+def find_angle(hour, minute):
+    # Make sure hour is within 12-hour format
+    hour = hour % 12
+    a = 30*(hour)-11/2*(minute)
+    return abs(a)
+
+# Example Usage
+hour = 15
+minute = 40
+angle = find_angle(hour, minute)
+print(f"The angle between the hour and minute hands at {hour}:{minute} is {angle} degrees.")
