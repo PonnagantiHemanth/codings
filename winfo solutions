@@ -1,0 +1,14 @@
+a = 19
+seen = set()
+while (a != 1):
+    if (a in seen):
+        print(False)
+        break 
+    seen.add(a)
+    temp = str(a)
+    co = 0 
+    for i in temp:
+        co += int(i)**2 
+        a = co 
+if (a == 1):
+    print(True)
