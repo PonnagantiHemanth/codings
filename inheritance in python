@@ -1,0 +1,13 @@
+class Mobile:
+    def __init__(self,name,age):
+        self.age = age 
+        self.name = name 
+    def inside(self):
+        print(self.name)
+class LL(Mobile):
+    def __init__(self,place,nat,name,age):
+        super().__init__(name,age)
+        self.place = place
+        self.nat = nat 
+b = LL('kavali','nn',"Google Devloper Hemanth SDE1",9)
+print(b.inside())
