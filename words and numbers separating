@@ -1,33 +1,26 @@
-def endingfunction(start_index,word):
-    ending = len(word)
-    for i in range (start_index,len(word)):
-        if (not word[i].isdigit()):
-            ending = i 
-            break
-    return ending
-
-
 def finding_solution(word):
-    word_list,num_list = [],[]
-    i = 0 
-    while(i < len(word)):
-        num = ''
-        if (word[i].isdigit()):
-            start_index = i 
-            end_index = endingfunction(start_index,word)
-            num = int(word[start_index:end_index])
-            num_list.append(num)
-            word_list.append(word[:start_index])
-            word = word[end_index:]
-            
+    word_list, num_list = [], []
+    i = 0
+    while i < len(word):
+        # If the character is a digit, extract the number
+        if word[i].isdigit():
+            start_index = i
+            # Move 'i' until we find a non-digit (end of the number)
+            while i < len(word) and word[i].isdigit():
+                i += 1
+            num_list.append(int(word[start_index:i]))  # Convert the number and append
         else:
-            i += 1 
-    word_list.append(word)
+            start_index = i
+            # Move 'i' until we find a digit (end of the word)
+            while i < len(word) and not word[i].isdigit():
+                i += 1
+            word_list.append(word[start_index:i])  # Append the word part
+    return word_list, num_list
 
 def main():
-    word = input()
+    word = "At 12pm total score is 180 with 8 4s 7 6s in 150balls"
     final_solution = finding_solution(word)
-    print(finding_solution)
-main()
+    print("Words:", final_solution[0])
+    print("Numbers:", final_solution[1])
 
-At 12pm total score is 180 with 8 4s 7 6s in 150balls
+main()
