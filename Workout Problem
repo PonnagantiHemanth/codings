@@ -1,0 +1,24 @@
+def workout_units(inputDay):
+    MOD = 1000000007
+    
+    # Base cases
+    if inputDay == 1:
+        return 2
+    elif inputDay == 2:
+        return 4
+    elif inputDay == 3:
+        return 6
+    
+    # Initializing the first three days
+    workout = [2, 4, 6]
+    
+    # Calculate the workout units for day 4 to inputDay
+    for day in range(3, inputDay):
+        next_workout = (workout[-1] + workout[-2] + workout[-3]) 
+        workout.append(next_workout)
+    
+    return workout[inputDay - 1]
+
+# Example usage
+inputDay = 5
+print(workout_units(inputDay))
