@@ -1,0 +1,25 @@
+def calculateSum(elementsList, listLength, k):
+    # Edge case 1: If the list is None or empty
+    if elementsList is None or listLength == 0:
+        return -2
+    
+    # Edge case 2: If k is greater than the length of the list
+    if k > listLength:
+        return 0
+    
+    # Initialize the sum
+    total_sum = 0
+    
+    # Loop to sum every k-th element (considering 1-based index)
+    for i in range(k - 1, listLength, k):  # start from k-1 (0-based index), step by k
+        total_sum += elementsList[i]
+    
+    return total_sum
+
+# Example input
+listLength = 8
+elementsList = [10, 12, 16, 1, 5, 6, 3, 21]
+k = 3
+
+# Call the function and print the result
+print(calculateSum(elementsList, listLength, k))  # Output should be 22 (16 + 6)
