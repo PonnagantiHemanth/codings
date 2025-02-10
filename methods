@@ -1,0 +1,61 @@
+1. Instance Methods (Most Common)
+Work with instance variables (self).
+Can modify object state.
+Example:
+python
+Copy
+Edit
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):  # Instance method
+        print(f"Hello, my name is {self.name}.")
+
+p = Person("Alice", 25)
+p.greet()  # ✅ Output: Hello, my name is Alice.
+2. Class Methods (@classmethod)
+Work with class variables (shared across all instances).
+Use cls instead of self.
+Cannot modify instance-specific data.
+Example:
+python
+Copy
+Edit
+class Person:
+    species = "Human"  # Class variable
+
+    @classmethod
+    def info(cls):
+        print(f"We are all {cls.species}.")
+
+Person.info()  # ✅ Output: We are all Human.
+3. Static Methods (@staticmethod)
+Don’t modify instance or class variables.
+Behave like normal functions inside a class.
+Useful for utility functions.
+Example:
+python
+Copy
+Edit
+class Math:
+    @staticmethod
+    def add(x, y):
+        return x + y
+
+print(Math.add(3, 5))  # ✅ Output: 8
+Summary
+Method Type	Uses self?	Uses cls?	Accesses Instance Variables?	Accesses Class Variables?
+Instance Method	✅ Yes	❌ No	✅ Yes	✅ Yes
+Class Method	❌ No	✅ Yes	❌ No	✅ Yes
+Static Method	❌ No	❌ No	❌ No	❌ No
+Would you like to dive deeper into method resolution order (MRO), dunder methods, or decorators? 🚀
+
+
+
+
+
+
+
+
