@@ -1,0 +1,35 @@
+a = int(input())
+matrix = []
+for i in range (a):
+    b = input().split()
+    matrix.append(b) 
+row = len(matrix) 
+col = max(len(l) for l in matrix)
+originalmatrix = [[0]*row for i in range (col)] 
+for i in range (col):
+    for j in range (row):
+        if (i < len(matrix[j])):
+            originalmatrix[i][j] = matrix[j][i]    
+        else:
+            originalmatrix[i][j] = None  
+per = [] 
+temp = [] 
+for i in originalmatrix:
+    for j in i:
+        if (j != None):
+            temp.append(j) 
+    per.append(temp) 
+    temp = [] 
+for i in per:
+    print(''.join(i))
+
+
+3
+Not you kid
+They are got
+Like great
+
+
+2
+by hy
+hy 
